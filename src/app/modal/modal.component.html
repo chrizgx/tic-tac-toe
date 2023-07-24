@@ -1,0 +1,11 @@
+<div id="winModal" class="modal">
+  <div *ngIf="config.modal == 'WIN'" class="modal-content">
+    <div class="title">
+      <img *ngIf="config.winner" src="assets/icon-x.svg" alt="" />
+      <img *ngIf="!config.winner" src="assets/icon-o.svg" alt="" />
+      <span [class.title-x]="config.winner" [class.title-o]="!config.winner"
+        >TAKES THE ROUND</span
+      >
+    </div>
+  </div>
+</div>
