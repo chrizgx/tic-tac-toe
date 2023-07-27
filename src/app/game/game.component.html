@@ -78,8 +78,8 @@
       </div>
 
       <div class="button-container">
-        <button class="button helping-button" (click)="gs.quit(game)">QUIT</button>
-        <button class="button secondary-button" (click)="gs.nextRound(game)">NEXT ROUND</button>
+        <button class="button helping-button" (click)="gs.gameService.quit(game)">QUIT</button>
+        <button class="button secondary-button" (click)="gs.gameService.nextRound(game)">NEXT ROUND</button>
       </div>
     </div>
   </div>
