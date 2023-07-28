@@ -35,6 +35,7 @@ export class CpuService {
     game.turn = !game.turn;
 
     await this.playCpu(row, col, game);
+    game.count++;
 
     if (this.gameService.checkWin(this.cpu, game.tests, game.board)) {
       this.gameService.declareWin(game, game.turn);
