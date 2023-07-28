@@ -99,4 +99,6 @@ export class GameComponent {
       : this.game.opponent == 'CPU'
       ? 'CPU'
       : 'P2';
+
+  
 }

@@ -5,7 +5,7 @@ import { Router } from '@angular/router';
   providedIn: 'root',
 })
 export class ConfigService {
-  player: 'X' | 'O' = 'X';
+  player: 'X' | 'O';
   opponent: 'CPU' | 'VS' | '' = '';
   router: Router = inject(Router);
 
@@ -21,5 +21,7 @@ export class ConfigService {
     }, 800);
   }
 
-  constructor() {}
+  constructor() {
+    this.player = 'X';
+  }
 }
