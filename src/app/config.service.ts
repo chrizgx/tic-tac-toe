@@ -5,21 +5,20 @@ import { Router } from '@angular/router';
   providedIn: 'root',
 })
 export class ConfigService {
-  player: 'X' | 'O';
+  player: 'X' | 'O' = 'X';
   opponent: 'CPU' | 'VS' | '' = '';
-  router: Router = inject(Router);
 
   changePlayer(x: boolean): void {
     this.player = x ? 'X' : 'O';
     console.log(this.player);
   }
 
-  setOpponent(cpu: boolean): void {
-    this.opponent = cpu ? 'CPU' : 'VS';
-    setTimeout(() => {
-      this.router.navigate(['/play']);
-    }, 800);
-  }
+  // setOpponent(cpu: boolean): void {
+  //   this.opponent = cpu ? 'CPU' : 'VS';
+  //   setTimeout(() => {
+  //     this.router.navigate(['/play']);
+  //   }, 800);
+  // }
 
   constructor() {
     this.player = 'X';

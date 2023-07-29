@@ -11,10 +11,18 @@ export class CpuService {
   gameService: GameService = inject(GameService);
   router: Router = inject(Router);
 
+  game = this.gameService.game;
+
   player: 'X' | 'O' = this.configService.player;
   cpu: 'X' | 'O' = this.player == 'X' ? 'O' : 'X';
 
+  updateVariables() {
+    this.player = this.configService.player;
+    this.cpu = this.player == 'X' ? 'O' : 'X';
+  }
+
   async play(row: number, col: number, game: any) {
+    console.log(this.player);
     if (game.board[row][col] != '') return;
     if (game.turn && this.player == 'O') return;
     if (!game.turn && this.player == 'X') return;
@@ -119,5 +127,9 @@ export class CpuService {
     return false;
   }
 
-  constructor() {}
+  constructor() {
+    // let randIntRow = Math.floor(Math.random()*2);
+    // let randIntCol = Math.floor(Math.random()*2);
+    // this.game.board[row][col] = this.configService.player=='O' && this.configService.opponent=='CPU' ? 'X' : '';
+  }
 }

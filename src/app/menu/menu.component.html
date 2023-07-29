@@ -33,16 +33,10 @@
     <p class="pick-subtitle">REMEMBER: X GOES FIRST</p>
   </div>
 
-  <button
-    class="button secondary-button"
-    (click)="configService.setOpponent(true)"
-  >
+  <button class="button secondary-button" (click)="this.play(true)">
     NEW GAME (VS CPU)
   </button>
-  <button
-    class="button primary-button"
-    (click)="configService.setOpponent(false)"
-  >
+  <button class="button primary-button" (click)="this.play(false)">
     NEW GAME (VS PLAYER)
   </button>
 
