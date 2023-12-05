@@ -4,12 +4,11 @@ import { ConfigService } from '../config.service';
 import { VsService } from '../vs.service';
 import { CpuService } from '../cpu.service';
 import { GameService } from '../game.service';
-import { ModalComponent } from '../modal/modal.component';
 
 @Component({
   selector: 'app-game',
   standalone: true,
-  imports: [CommonModule, ModalComponent],
+  imports: [CommonModule],
   templateUrl: './game.component.html',
   styleUrls: ['./game.component.css'],
 })
