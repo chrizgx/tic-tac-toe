@@ -1,27 +1,20 @@
-# MyApp
+# Tic-Tac-Toe Game
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.5.
+This project is a Tic-Tac-Toe game built with Angular. It offers two gameplay options: Play against the CPU or witha nother human player on the same device. The CPU has been programmed with a strategy to win and prevent the opponent from winning.
 
-## Development server
+The project is based on Angular and after building the app, it is served using a simple Node.js server on file server.js
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+### Features
 
-## Code scaffolding
+- Two gameplay modes: Player vs CPU and Player vs Player
+- Intelligent CPU opponent
+- Sleek and intuitive user interface
+- Built with Angular, showcasing modern web development practices
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Getting Started
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+1. Clone this repository
+2. Install dependencies with `npm install`
+3. Build the app with `ng build`
+4. Start the server with `node server.js`, after specifying `PORT` env variable (default is port 8080)
+5. Open your browser and navigate to `localhost:PORT`
